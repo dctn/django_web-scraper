@@ -1,0 +1,40 @@
+form {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 32px;
+}
+.form_body{
+    display: flex;
+    justify-content: center;
+}
+#id_url{
+    width: 50rem;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.btn{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 32px;
+    padding: 30xp;
+    color: white;
+    margin: 10px;
+}
+
+.continar{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    gap: 0;
+}
+p{
+    margin: 0px;
+
+}

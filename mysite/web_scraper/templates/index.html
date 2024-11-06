@@ -1,0 +1,27 @@
+{% load static  %}
+
+<script>
+    function clearform(event) {
+        event.preventDefault();  // Prevent form submission
+        document.getElementById('form_id').reset();  // Reset the form fields
+    }
+</script>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<form action="" method="POST" id="form_id">
+    {% csrf_token %}
+    <div>
+    {{ form.as_p }}
+    </div>
+    <div class='form_body'>
+    <button class='btn' type="submit">Scrape</button>
+    <button class='btn' type="button" name="clear" onclick="clearform(event)">Clear</button> <!-- Clear button -->
+    </div>
+</form>
+
+<div class="continar">
+{% for link in data  %}
+    <br>
+    <p>{{ link }}</p>
+    {% comment %} <h4>{{ link }}</h4> {% endcomment %}
+{% endfor %}
+</div>
